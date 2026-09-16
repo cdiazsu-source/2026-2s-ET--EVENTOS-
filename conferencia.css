@@ -1,0 +1,253 @@
+/* ============================================================
+   Tema "Semana de la Investigación FCE 2026"
+   Identidad propia de esta conferencia (azul marino + rosa/
+   magenta), aislada en su propio archivo para no alterar el
+   sistema olive/teal del resto del sitio de Eventos UIFCE.
+   Se aplica únicamente dentro de .theme-research.
+   ============================================================ */
+
+:root {
+  --conf-navy-1: #0b1130;
+  --conf-navy-2: #121a3d;
+  --conf-pink: #e91750;
+  --conf-pink-soft: #ff5c86;
+  --conf-yellow: #f7c948;
+  --conf-text-soft: rgba(255, 255, 255, 0.72);
+}
+
+.theme-research {
+  position: relative;
+  background: linear-gradient(165deg, var(--conf-navy-1) 0%, var(--conf-navy-2) 55%, var(--conf-navy-1) 100%);
+  color: #fff;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.theme-research::before {
+  content: '';
+  position: absolute;
+  top: -70px;
+  right: -70px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--conf-pink-soft), var(--conf-pink) 60%, transparent 75%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.theme-research::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  left: -60px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  z-index: -1;
+}
+
+.research-ring {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  z-index: -1;
+}
+
+.research-dot {
+  position: absolute;
+  bottom: 92px;
+  right: 14%;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--conf-pink);
+  z-index: -1;
+}
+
+.research-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 6px 14px 6px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.research-kicker .x-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--conf-pink);
+  color: var(--conf-pink);
+  font-size: 12px;
+  font-weight: 800;
+  transform: rotate(0deg);
+}
+
+.theme-research .event-eyebrow .area-tag {
+  background: var(--conf-pink);
+}
+
+.theme-research .event-eyebrow .level-tag {
+  color: #fff;
+  opacity: 0.85;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-research .event-detail-intro h1,
+.theme-research h1 {
+  color: #fff;
+}
+
+.theme-research .subtitle {
+  color: var(--conf-pink-soft);
+}
+
+.theme-research .value-prop {
+  color: var(--conf-text-soft);
+}
+
+.theme-research .section-heading {
+  color: #fff;
+}
+
+.theme-research .info-item {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.theme-research .info-icon {
+  background: var(--conf-pink);
+}
+
+.theme-research .info-text .label {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.theme-research .info-text .value {
+  color: #fff;
+}
+
+.theme-research .speaker-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-left: 4px solid var(--conf-pink);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.theme-research .speaker-avatar {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--conf-pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+}
+
+.theme-research .speaker-card h4 {
+  margin: 0 0 2px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.theme-research .speaker-card p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--conf-text-soft);
+}
+
+.theme-research .purpose-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.16);
+  border-left-color: var(--conf-pink);
+  color: var(--conf-text-soft);
+}
+
+.includes-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.includes-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 8px 16px 8px 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.includes-pill .pill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--conf-pink);
+  flex: 0 0 auto;
+}
+
+.includes-pill .pill-icon svg {
+  width: 13px;
+  height: 13px;
+  color: #fff;
+}
+
+.theme-research .btn-cta {
+  background: var(--conf-pink);
+  box-shadow: 0 10px 24px -8px rgba(233, 23, 80, 0.6);
+}
+
+.theme-research .btn-cta:hover {
+  background: #c9123f;
+}
+
+.theme-research .spots-note {
+  color: var(--conf-text-soft);
+}
+
+.theme-research .back-link a {
+  color: #fff;
+  opacity: 0.85;
+}
+
+@media (max-width: 640px) {
+  .research-ring,
+  .research-dot,
+  .theme-research::before,
+  .theme-research::after {
+    display: none;
+  }
+}

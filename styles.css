@@ -356,6 +356,10 @@ a { color: var(--text-subtitle); }
   background: transparent;
 }
 
+.area-tag.tag-magenta {
+  background: #e91750;
+}
+
 .event-card h3 {
   margin: 0;
   font-size: 1.15rem;
