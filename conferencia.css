@@ -243,6 +243,128 @@
   opacity: 0.85;
 }
 
+/* ---------- Evento finalizado ---------- */
+
+.theme-research .event-eyebrow .level-tag.tag-finished {
+  opacity: 1;
+  color: var(--conf-yellow);
+  border-color: var(--conf-yellow);
+}
+
+.event-finished {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(247, 201, 72, 0.1);
+  border: 1px solid rgba(247, 201, 72, 0.4);
+  border-left: 4px solid var(--conf-yellow);
+  border-radius: 14px;
+  padding: 16px 18px;
+  text-align: left;
+}
+
+.event-finished .finished-icon {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--conf-yellow);
+  color: var(--conf-navy-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-finished .finished-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.event-finished h4 {
+  margin: 0 0 2px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.event-finished p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--conf-text-soft);
+}
+
+/* ---------- Galería de fotos (scroll horizontal) ---------- */
+
+.photo-scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 2px;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px 2px 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--conf-pink) rgba(255, 255, 255, 0.12);
+}
+
+.photo-scroll:focus-visible {
+  outline: 2px solid var(--conf-pink-soft);
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+.photo-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.photo-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.photo-scroll::-webkit-scrollbar-thumb {
+  background: var(--conf-pink);
+  border-radius: 999px;
+}
+
+.photo-item {
+  position: relative;
+  flex: 0 0 min(82%, 460px);
+  margin: 0;
+  scroll-snap-align: center;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--conf-navy-2);
+}
+
+.photo-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.photo-item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 14px 10px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(to top, rgba(11, 17, 48, 0.88), transparent);
+}
+
+.scroll-hint {
+  margin: -6px 0 0;
+  text-align: right;
+  font-size: 12px;
+  color: var(--conf-text-soft);
+}
+
 @media (max-width: 640px) {
   .research-ring,
   .research-dot,
