@@ -1,0 +1,413 @@
+/* ============================================================
+   Microtaller QuickBooks — página de evento abierto
+   Se apoya en styles.css. Adapta los componentes de la página
+   de detalle de curso de Cursos Libres UIFCE (hero, pilares,
+   certificación, banner del monitor con Uifcito y CTA final).
+   ============================================================ */
+
+.qb-detail {
+  gap: 30px;
+}
+
+/* ---------- Hero ---------- */
+.qb-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 26px 20px 28px;
+  border-radius: 18px;
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(242, 191, 46, 0.22) 0%, transparent 60%),
+    radial-gradient(100% 120% at 0% 100%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+    var(--brand-olive-deep);
+  color: #fff;
+}
+
+.qb-logo {
+  height: 34px;
+  width: auto;
+  padding: 8px 16px;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.qb-badges {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.qb-hero .level-tag {
+  color: #fff;
+  opacity: 0.95;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.qb-hero h1 {
+  margin: 0;
+  max-width: 20ch;
+  text-align: center;
+  font-size: 2.1rem;
+  line-height: 1.15;
+  color: #fff;
+}
+
+.qb-hero .subtitle {
+  margin: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--warning-2);
+}
+
+.qb-hero .qb-lead {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 15.5px;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.qb-dates {
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.qb-dates span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.qb-dates svg {
+  width: 16px;
+  height: 16px;
+  color: var(--warning-2);
+}
+
+.qb-hero .btn-enroll { margin-top: 10px; }
+
+.qb-hero-note {
+  margin: 0;
+  font-size: 12.5px;
+  opacity: 0.85;
+}
+
+/* ---------- Secciones ---------- */
+.qb-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.qb-section h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+.qb-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-title);
+}
+
+.qb-section p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+.qb-lead {
+  font-size: 17px;
+  max-width: 70ch;
+}
+
+.qb-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.qb-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 14px;
+}
+
+.qb-pillar .qb-pillar-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--brand-olive);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.qb-pillar .qb-pillar-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.qb-pillar p { font-size: 14px; }
+
+/* ---------- Sesiones ---------- */
+.qb-sessions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.qb-session {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.qb-session-date {
+  flex: 0 0 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 14px 8px;
+  background: var(--brand-olive);
+  color: #fff;
+  text-align: center;
+}
+
+.qb-session-date .dow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.qb-session-date .day {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.qb-session-date .mon {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.qb-session-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px 14px 0;
+  min-width: 0;
+}
+
+.qb-session-body .kicker {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-subtitle);
+}
+
+.qb-session-body .time {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-body);
+  opacity: 0.8;
+}
+
+/* ---------- Certificación ---------- */
+.qb-cert {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  padding: 24px 28px;
+  background: linear-gradient(100deg, color-mix(in srgb, #0a66c2 10%, #fff), var(--surface-page) 75%);
+  border: 1px solid color-mix(in srgb, #0a66c2 35%, var(--border-muted));
+  border-left: 6px solid #0a66c2;
+  border-radius: 16px;
+}
+
+.qb-cert-logo {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  background: #fff;
+  border: 1px solid var(--border-muted);
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(10, 102, 194, 0.15);
+}
+
+.qb-cert-logo svg {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.qb-cert-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.qb-section .qb-cert-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a66c2;
+}
+
+.qb-cert h3 { font-size: 20px; line-height: 1.25; }
+
+.qb-checks {
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qb-checks li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 14.5px;
+  line-height: 1.4;
+}
+
+.qb-checks li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--success-1)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
+    center / 11px no-repeat;
+}
+
+/* ---------- Monitora con Uifcito ---------- */
+.qb-team {
+  position: relative;
+  margin-top: 64px;
+  min-height: 112px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 16px;
+  padding: 20px 24px 20px 168px;
+  background: linear-gradient(100deg, color-mix(in srgb, var(--brand-olive) 18%, #fff), var(--surface-page) 70%);
+  border: 1px solid var(--brand-olive);
+  border-radius: 16px;
+  text-align: left;
+}
+
+.qb-team .qb-mascot {
+  position: absolute;
+  left: 28px;
+  bottom: 0;
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+}
+
+.qb-team-info {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.qb-section .qb-team-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+
+.qb-team-info h3 { font-size: 1.2rem; }
+
+.qb-section .qb-team-role { font-size: 14px; }
+
+/* ---------- Texto alterno bajo el CTA final ---------- */
+.qb-alt {
+  margin: -14px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-body);
+  opacity: 0.8;
+}
+
+@media (max-width: 639px) {
+  .qb-hero { padding: 22px 16px 24px; }
+  .qb-hero h1 { font-size: 1.65rem; }
+  .qb-hero .btn-enroll { width: 100%; }
+
+  .qb-cert {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 18px;
+  }
+  .qb-cert-logo { width: 64px; height: 64px; }
+  .qb-cert h3 { font-size: 18px; }
+
+  .qb-team {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 84px;
+    padding: 76px 18px 18px;
+    text-align: center;
+  }
+  .qb-team .qb-mascot {
+    left: 50%;
+    bottom: auto;
+    top: -76px;
+    width: 108px;
+    transform: translateX(-50%);
+  }
+  .qb-team-info { flex-basis: auto; }
+}
