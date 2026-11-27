@@ -1,0 +1,345 @@
+/* ============================================================
+   Taller Excel corporativo — identidad del póster
+   (azul, amarillo y cian). Se apoya en styles.css.
+   ============================================================ */
+
+.xl-detail {
+  --xl-blue: #0b45c7;
+  --xl-blue-mid: #0a32a4;
+  --xl-blue-deep: #081e79;
+  --xl-yellow: #f8c734;
+  --xl-cyan: #3dd3fe;
+  gap: 30px;
+}
+
+/* ---------- Hero ---------- */
+.xl-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 30px 28px 28px;
+  border-radius: 18px;
+  text-align: left;
+  color: #fff;
+  background:
+    radial-gradient(70% 90% at 100% 0%, rgba(61, 211, 254, 0.22) 0%, transparent 60%),
+    linear-gradient(170deg, var(--xl-blue) 0%, var(--xl-blue-mid) 55%, var(--xl-blue-deep) 100%);
+}
+
+.xl-tags {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.xl-hero .level-tag {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.xl-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: var(--xl-yellow);
+  color: var(--xl-blue-deep);
+}
+
+.xl-kicker {
+  margin: 6px 0 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+}
+
+.xl-hero h1 {
+  margin: 0;
+  text-align: left;
+  font-size: 3.4rem;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.xl-hero .subtitle {
+  margin: 0;
+  text-align: left;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--xl-yellow);
+}
+
+.xl-lead {
+  margin: 4px 0 0;
+  max-width: 54ch;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.xl-when {
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.xl-when > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px 14px;
+  border-radius: 16px;
+}
+
+.xl-when .label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.xl-when .value {
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.xl-when .date {
+  background: var(--xl-yellow);
+  color: var(--xl-blue-deep);
+}
+
+.xl-when .time {
+  background: var(--xl-cyan);
+  color: var(--xl-blue-deep);
+}
+
+.xl-when .place {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+}
+
+.xl-when .place .value { font-size: 1.3rem; }
+
+/* ---------- Aviso de acceso libre ---------- */
+.xl-access {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--xl-yellow) 22%, #fff);
+  border: 1px solid var(--xl-yellow);
+  border-left: 6px solid var(--xl-yellow);
+  text-align: left;
+}
+
+.xl-access-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--xl-blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.xl-access-icon svg { width: 22px; height: 22px; }
+
+.xl-access h2 {
+  margin: 0 0 2px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--xl-blue-deep);
+}
+
+.xl-access p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--text-body);
+}
+
+/* ---------- Secciones ---------- */
+.xl-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.xl-section h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--xl-blue-deep);
+}
+
+.xl-section h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--xl-blue-deep);
+}
+
+.xl-section p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-body);
+}
+
+.xl-section > .xl-intro { font-size: 17px; max-width: 70ch; }
+
+.xl-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.xl-pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 18px;
+  background: var(--surface-page);
+  border: 1px solid var(--border-muted);
+  border-top: 4px solid var(--xl-blue);
+  border-radius: 14px;
+}
+
+.xl-pillar-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--xl-blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin-bottom: 4px;
+}
+
+.xl-pillar-icon svg { width: 19px; height: 19px; }
+
+.xl-pillar p { font-size: 14px; }
+
+/* ---------- Coordinador (perfil de LinkedIn) ---------- */
+.xl-coord {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--border-muted);
+  box-shadow: var(--shadow-card);
+}
+
+.xl-coord-label {
+  align-self: flex-start;
+  margin: 0;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: var(--xl-cyan);
+  color: var(--xl-blue-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.xl-profile {
+  margin: 0;
+  border: 1px solid var(--border-muted);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.xl-profile img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.xl-section .xl-coord h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.xl-coord .xl-role {
+  font-size: 15px;
+  color: var(--xl-blue);
+}
+
+/* ---------- Experiencia en P&G ---------- */
+.xl-exp {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--xl-blue-mid), var(--xl-blue-deep));
+  color: #fff;
+  text-align: left;
+}
+
+.xl-exp-logo {
+  flex: 0 0 auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+.xl-exp-tag {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--xl-yellow);
+  color: var(--xl-blue-deep);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.xl-detail .xl-exp h3 {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.xl-exp p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: #fff;
+  opacity: 0.95;
+}
+
+@media (max-width: 639px) {
+  .xl-hero { padding: 24px 18px 22px; }
+  .xl-hero h1 { font-size: 2.5rem; }
+  .xl-kicker, .xl-hero .subtitle { font-size: 1.3rem; }
+
+  .xl-when { grid-template-columns: 1fr; }
+  .xl-when .place { flex-direction: column; align-items: flex-start; gap: 2px; }
+
+  .xl-access { flex-direction: column; align-items: flex-start; gap: 10px; }
+
+  .xl-exp { flex-direction: column; align-items: flex-start; padding: 20px 18px; }
+}
