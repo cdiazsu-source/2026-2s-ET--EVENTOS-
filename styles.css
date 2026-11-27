@@ -985,3 +985,40 @@ a { color: var(--text-subtitle); }
 @media (max-width: 640px) {
   .event-card.featured .btn-detail { width: 100%; }
 }
+
+/* Estado "inscripciones próximamente" (microtalleres sin formulario aún) */
+.status-pill.soon {
+  background: #3dd3fe;
+  color: #081e79;
+  border-color: #3dd3fe;
+}
+
+.event-card-desc {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--text-body);
+}
+
+.event-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+
+@media (max-width: 640px) {
+  .event-grid.two-col { grid-template-columns: 1fr; }
+}
+
+/* Botón de inscripción compacto para tarjetas del hub */
+.event-card .btn-enroll-sm {
+  align-self: flex-start;
+  min-height: 42px;
+  padding: 0 22px;
+  margin-top: 4px;
+  font-size: 15px;
+  box-shadow: 0 0 0 3px rgba(242, 191, 46, 0.35), 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estado: inscripciones cerradas */
+.status-pill.closed {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}

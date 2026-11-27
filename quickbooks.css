@@ -411,3 +411,23 @@
   }
   .qb-team-info { flex-basis: auto; }
 }
+
+/* Inscripciones cerradas */
+.qb-hero .btn-detail {
+  margin-top: 6px;
+  padding: 10px 26px;
+  white-space: normal;
+  text-align: center;
+}
+
+.qb-hero .btn-detail:hover { background: #fff; color: var(--brand-olive-deep); }
+
+.enroll-card.is-closed:hover { transform: none; box-shadow: none; }
+
+.enroll-card.is-closed .btn-detail { white-space: normal; text-align: center; padding: 10px 24px; }
+
+.enroll-card.is-closed .btn-detail:hover { background: #fff; color: var(--brand-olive-deep); }
+
+@media (max-width: 639px) {
+  .enroll-card.is-closed .btn-detail { width: 100%; }
+}
